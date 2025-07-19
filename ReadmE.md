@@ -16,11 +16,3 @@ Welcome to the ProfPulse GitHub organization! ProfPulse is an open‑technology 
 | **profpulse-frontend**             | React‑based dashboard application: UI components, data visualizations, and integration with backend services.                   |
 | **profpulse-integration-examples** | Sample connector scripts (LTI, SCORM, xAPI) showing how to plug ProfPulse into various LMS platforms.                            |
 | **profpulse-analytics-models**     | Jupyter notebooks and Python modules implementing data‑processing pipelines and predictive models for engagement analytics.    |
-
----
-
-## Getting Started
-
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/your‑org/profpulse-<repo-name>.git
