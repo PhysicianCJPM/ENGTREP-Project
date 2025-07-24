@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ProfPulse Dashboard{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'ProfPulse/css/index.css' %}">
+{% endblock %}
+{% block content %}
+<section id="overview">
+  <h2>Welcome to ProfPulse</h2>
+  <p>Your unified platform for open content, LMS integration, and data-driven insights.</p>
+</section>
+<section id="modules" class="grid" style="gap:1.5rem;">
+  <div class="card" data-summary="OpenCore is our OER engine—browse thousands of peer‑reviewed textbooks, interactive modules, and multimedia resources, then remix and publish them directly to your courses." data-url="{% url 'oer' %}">
+    <h3>OpenCore (OER) <span class="toggle-icon">▼</span></h3>
+    <img src="{% static 'ProfPulse/img/oer.png' %}" alt="OER Preview" class="card-img" />
+    <div class="card-summary"></div>
+    <a href="#" class="view-more" data-url="{% url 'oer' %}">Explore OER Library</a>
+  </div>
+
+  <div class="card" data-summary="PulseSync connects all your campus LMS platforms—automatically synchronizing courses, enrollments, and content updates so instructors and students stay in sync without manual overhead." data-url="#">
+    <h3>PulseSync (LMS) <span class="toggle-icon">▼</span></h3>
+    <img src="{% static 'ProfPulse/img/lms.png' %}" alt="LMS Integration Preview" class="card-img" />
+    <div class="card-summary"></div>
+    <a href="#" class="view-more" data-url="#">Go to LMS Sync</a>
+  </div>
+
+  <div class="card" data-summary="InsightIQ delivers real‑time analytics—track engagement heatmaps, early‑alert risk flags, and outcome dashboards to drive retention and personalized support." data-url="#">
+    <h3>InsightIQ (Analytics) <span class="toggle-icon">▼</span></h3>
+    <img src="{% static 'ProfPulse/img/als.png' %}" alt="Analytics Preview" class="card-img" />
+    <div class="card-summary"></div>
+    <a href="#" class="view-more" data-url="#">View Analytics</a>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'ProfPulse/js/index.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}ProfPulse{% endblock %}</title>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="{% static 'ProfPulse/css/base.css' %}" />
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="{% url 'index' %}" class="logo-link">
+      <img src="{% static 'ProfPulse/img/logo.png' %}" alt="ProfPulse Logo" class="site-logo" />
+    </a> ProfPulse
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'oer' %}">OER</a></li>
+        <li><a href="#">LMS Sync</a></li>
+        <li><a href="#">Analytics</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 ProfPulse. All rights reserved.</p>
+  </footer>
+
+  <!-- Global JS -->
+  <script src="{% static 'ProfPulse/js/app.js' %}"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

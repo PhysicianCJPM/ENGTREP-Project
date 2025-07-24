@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ProfPulse – OER Library{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'ProfPulse/css/oer.css' %}">
+{% endblock %}
+
+{% block content %}
+<section id="oer-intro" class="oer-intro">
+  <h2>Open Educational Resources</h2>
+  <p>ProfPulse’s <strong>OpenCore</strong> module lets you discover, adapt, and share high‑quality OER content—saving students money and giving educators full control over their materials.</p>
+</section>
+
+<section id="oer-features" class="grid">
+  <!-- Cards will be injected here by oer.js -->
+</section>
+{% endblock %}
+ 
+{% block extra_js %}
+<script src="{% static 'ProfPulse/js/oer.js' %}"></script>
+{% endblock %}
