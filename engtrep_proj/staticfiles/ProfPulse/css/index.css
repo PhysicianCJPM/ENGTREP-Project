@@ -1,0 +1,76 @@
+/* Reset some defaults */
+#overview {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#modules.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+    position: relative;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.card:hover { transform: translateY(-4px); }
+
+.card-summary {
+    display: none;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+}
+.card.open .card-summary {
+    display: block;
+}
+
+.toggle-icon {
+    float: right;
+    transition: transform 0.2s;
+}
+.card.open .toggle-icon { transform: rotate(180deg); }
+
+.card-img {
+    display: none;
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+.card.open .card-img {
+    display: block;
+}
+
+.view-more {
+    display: none;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+    .card.open .view-more {
+    display: inline-block;
+}
+
+/* in core/static/core/css/styles.css or index.css */
+#modules.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+
+  /* Add this line: */
+  align-items: start;
+}

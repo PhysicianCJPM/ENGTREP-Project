@@ -17,11 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ProfPulse import views
+from django_distill import distill_path 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index,name='index'),
-    path('oer/',views.oer,name="oer"),
-    path('lms/',views.lms,name="lms"),
-    path('analytics/',views.analytics,name="analytics"),
+    distill_path('',views.index,name='index'),
+    distill_path('oer/',views.oer,name="oer"),
+    distill_path('lms/',views.lms,name="lms"),
+    distill_path('analytics/',views.analytics,name="analytics"),
 ]
