@@ -1,0 +1,78 @@
+/* OER page layout */
+.oer-intro {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #222;
+}
+.oer-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #004080;
+}
+.oer-intro p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Grid for feature cards */
+#oer-features.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Card styling */
+.oer-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+.oer-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Image at top */
+.oer-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* Content area */
+.oer-card-content {
+  padding: 1rem;
+  flex: 1;
+}
+.oer-card-content h3 {
+  margin: 0 0 0.5rem;
+  color: #004080;
+  font-size: 1.1rem;
+}
+.oer-card-content p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Call-to-action */
+.oer-card-content a {
+  align-self: start;
+  padding: 0.5rem 1rem;
+  background: #0066cc;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+.oer-card-content a:hover {
+  background: #004a99;
+}
