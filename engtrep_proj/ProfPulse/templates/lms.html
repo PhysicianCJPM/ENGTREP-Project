@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}LMS Integration | ProfPulse{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'ProfPulse/css/lms.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h1 class="mb-4">LMS Integration</h1>
+    <p>
+        ProfPulse seamlessly connects with multiple Learning Management Systems (LMS) to unify course content, analytics, and user experience. 
+        Our platform supports integration standards such as LTI, SCORM, and xAPI, enabling institutions to leverage Open Educational Resources (OER) and real-time analytics across their existing LMS infrastructure.
+    </p>
+    <h3 class="mt-4">Supported LMS Platforms</h3>
+    <ul>
+        <li>Moodle</li>
+        <li>Canvas</li>
+        <li>Blackboard</li>
+        <li>Sakai</li>
+        <li>Brightspace (D2L)</li>
+        <li>And more...</li>
+    </ul>
+    <h3 class="mt-4">Integration Features</h3>
+    <ul>
+        <li>Single sign-on (SSO) and user provisioning</li>
+        <li>Automated course and roster synchronization</li>
+        <li>Real-time engagement analytics</li>
+        <li>OER content embedding and management</li>
+        <li>Compliance with LTI, SCORM, and xAPI standards</li>
+    </ul>
+    <p class="mt-4">
+        For integration guides and sample code, see hese 
+        <a href="https://whatfix.com/blog/lms-integration/" target="_blank">Integration Examples</a> repository.
+    </p>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'ProfPulse/js/lms.js' %}"></script>
+{% endblock %}

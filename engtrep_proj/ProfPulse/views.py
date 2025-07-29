@@ -6,3 +6,9 @@ def index(request):
 
 def oer(request):
     return render(request,'oer.html')
+
+def lms(request):
+    return render(request,'lms.html')
+
+def analytics(request):
+    return render(request,'analytics.html')
